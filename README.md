@@ -6,9 +6,10 @@ Se desarrollará una Arquitectura VLIW Propia para Aplicaciones de Cifrado por B
 | Content Cell  | Content Cell  |
 | Content Cell  | Content Cell  |
 
-| Registers  | Descripcion: | Codificación en decimal | 
-| rz | Constante cero cableada. Cualquier lectura retorna 0; escrituras se descartan.  | 0  |
-| rl | Enlace de retorno (Return Address). JAL guarda aquí el PC de retorno; E lo usa para volver.   | 1 |
+| Registers  | Descripcion:                                                                                  | Codificación en decimal | 
+| -----------| --------------------------------------------------------------------------------------------- | ------------------------|
+| rz         | Constante cero cableada. Cualquier lectura retorna 0; escrituras se descartan.                | 0                       |
+| rl         | Enlace de retorno (Return Address). JAL guarda aquí el PC de retorno; E lo usa para volver.   | 1                       |
 | rx |  General  | 2  |
 | rg | Puntero global. Base para variables de módulo y tablas de saltos en Calser.| 3 |
 | ra | Argumento 0 | 4  |
