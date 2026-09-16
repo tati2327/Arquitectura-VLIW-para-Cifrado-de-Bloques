@@ -36,7 +36,7 @@ aceleración de un algoritmo de cifrado por bloques tipo Feistel.
 ### Formato de las instrucciones VLIW
 
 Cada instrucción VLIW (bundle) estará compuesta por 5 slots, cada uno dedicado 
-a una unidad funcional específica y ejecutando en paralelo durante el mismo ciclo de reloj.
+a una unidad funcional específica y ejecutado en paralelo durante el mismo ciclo de reloj.
 ```
             [                                Bundle	 160 bits                                 ]
             [ [ slot 32 bits] [ slot 32 bits] [ slot 32 bits] [ slot 32 bits] [ slot 32 bits] ]
