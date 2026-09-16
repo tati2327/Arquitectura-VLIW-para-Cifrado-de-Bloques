@@ -16,7 +16,7 @@
 
 ---
 
-## 📖 Descripción
+## Resumen
 
 En este proyecto se desarrollará una Arquitectura VLIW Propia para Aplicaciones de Cifrado por Bloques 
 aplicando los conceptos de arquitectura de computadores en el diseño e implementación en SystemVerilog 
@@ -67,16 +67,6 @@ Para el desarrollo del procesador VLIW se estarán utilizando 16 registros, los 
 
 ---
 
-## 🎯 Objetivos
-
-- Diseñar una arquitectura VLIW.
-- Implementar unidades funcionales para operaciones criptográficas.
-- Analizar el paralelismo a nivel de instrucción.
-- Evaluar el funcionamiento de la arquitectura.
-- Validar los resultados obtenidos.
-
----
-
 ## 🎛️ Unidades Funcionales
 
 Las unidades funcionales a utilizar para desarrollar un procesador VLIW son las siguientes:
@@ -86,12 +76,6 @@ Las unidades funcionales a utilizar para desarrollar un procesador VLIW son las 
 - Crypto
 - LSU
 - BRU
-
-### Diagrama
-
-<p align="center">
-  <img src="images/arquitectura.png" width="700">
-</p>
 
 ---
 
@@ -104,7 +88,7 @@ Las unidades funcionales a utilizar para desarrollar un procesador VLIW son las 
 
 ---
 
-## 📂 Estructura del proyecto
+##  Estructura del proyecto
 
 ```text
 
@@ -138,6 +122,7 @@ Las unidades funcionales a utilizar para desarrollar un procesador VLIW son las 
 │       ├── ⚙️ run.sh
 │       └── 📁 results
 |
+
 ```
 
 ---
@@ -152,51 +137,22 @@ git clone https://github.com/tati2327/vliw-block-cipher.git
 
 ---
 
-## ▶️ Ejecución
+## 💻 Ejecución
 
-Describe aquí los pasos necesarios para compilar,
+Pasos necesarios para compilar,
 simular o ejecutar el proyecto.
 
 ```bash
-# Ejemplo
+
 comando-de-ejecucion
 ```
 
 ---
 
-## 🧪 Pruebas
-
-Las pruebas permiten verificar el funcionamiento de la arquitectura
-y comparar los resultados obtenidos con los valores esperados.
-
-### Ejemplo
-
-| Entrada | Resultado esperado | Resultado obtenido |
-|---|---|---|
-| `0x1234` | `0xABCD` | `0xABCD` |
-| `0x5678` | `0xEF01` | `0xEF01` |
-
----
-
-## 📊 Resultados
-
-<p align="center">
-  <img src="images/resultados.png" width="700">
-</p>
-
-Los resultados obtenidos muestran el comportamiento de la arquitectura
-durante la ejecución del algoritmo de cifrado.
-
----
-
-## 📚 Referencias
-
-- 
-
 ---
 
 <p align="center">
-  ⭐ Proyecto académico de Arquitectura de Computadores ⭐
+  ⭐ Proyecto académico de Arquitectura de Computadores 1 ⭐
 </p>
 
 ---
