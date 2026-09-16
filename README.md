@@ -16,7 +16,7 @@
 
 ---
 
-## Resumen
+## Arquitectura del ISA
 
 En este proyecto se desarrollará una Arquitectura VLIW Propia para Aplicaciones de Cifrado por Bloques 
 aplicando los conceptos de arquitectura de computadores en el diseño e implementación en SystemVerilog 
@@ -32,6 +32,21 @@ aceleración de un algoritmo de cifrado por bloques tipo Feistel.
 | Cantidad registros generales	 | 16  | 
 | Tamaño inmediatos	 |   | 
 | Endian  | 	Little  | 
+
+### Tipos de instrucciones	
+Se utilizarán instrucciones de los siguientes tipos
+
+| Parámetro     | Valor         |
+| ------------- | ------------- |
+| R | 	Register |
+| I | 	immediate |
+| B | 	Branch |
+| S | 	Store & Branch |
+| J | 	jump |
+| C | 	cifrado |
+| A | 	arithmetic |
+| K | 	key-vault |
+| M | 	Move condicional |
 
 ### Formato de las instrucciones VLIW
 
