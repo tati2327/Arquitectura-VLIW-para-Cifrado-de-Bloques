@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="images/logo.png" width="180">
+  <img src="docs/images/logo.png" width="300">
 </p>
 
 <h1 align="center"> Arquitectura VLIW para Cifrado de Bloques </h1>
@@ -8,12 +8,10 @@
   Diseño e implementación de una arquitectura VLIW orientada al cifrado de bloques.
 </p>
 
-<p align="center">
-
-![VLIW](https://img.shields.io/badge/Architecture-VLIW-blue)
-![Language](https://img.shields.io/badge/Language-Verilog-orange)
-![Platform](https://img.shields.io/badge/Platform-FPGA-green)
-
+<p align="center"> 
+  <img src="https://img.shields.io/badge/Architecture-VLIW-blue" alt="Architecture VLIW"> 
+  <img src="https://img.shields.io/badge/Language-SystemVerilog-orange" alt="Language SystemVerilog"> 
+  <img src="https://img.shields.io/badge/Course-CE4301-green" alt="Course CE4301">
 </p>
 
 ---
@@ -35,7 +33,18 @@ aceleración de un algoritmo de cifrado por bloques tipo Feistel.
 | Tamaño inmediatos	 |   | 
 | Endian  | 	Little  | 
 
+### Formato de las instrucciones VLIW
+
+Cada instrucción VLIW (bundle) estará compuesta por 5 slots, cada uno dedicado 
+a una unidad funcional específica y ejecutando en paralelo durante el mismo ciclo de reloj.
+```
+            [                                Bundle	 160 bits                                 ]
+            [ [ slot 32 bits] [ slot 32 bits] [ slot 32 bits] [ slot 32 bits] [ slot 32 bits] ]
+```
+
 ### Registros
+
+Para el desarrollo del procesador VLIW se estarán utilizando 16 registros, los cuales se describen a contiuación.
 
 | Registers  | Descripcion   | Codificación en decimal | 
 | -----------| ------------- | ----------------------- |
@@ -68,16 +77,15 @@ aceleración de un algoritmo de cifrado por bloques tipo Feistel.
 
 ---
 
-## 🎛️ Arquitectura
+## 🎛️ Unidades Funcionales
 
-La arquitectura está compuesta por:
+Las unidades funcionales a utilizar para desarrollar un procesador VLIW son las siguientes:
 
-- Unidad de control
-- Banco de registros
-- Unidades funcionales
-- Memoria
-- Unidad de cifrado
-- Interconexiones entre componentes
+- ALU0
+- ALU1
+- Crypto
+- LSU
+- BRU
 
 ### Diagrama
 
@@ -100,63 +108,36 @@ La arquitectura está compuesta por:
 
 ```text
 
-
-vliw-block-cipher/
+📦 vliw-block-cipher
 │
-├── README.md
-├── LICENSE
-├── .gitignore
+├── 📄 README.md
+├── 📄 LICENSE
+├── 📄 .gitignore
 │
-├── docs/
-│   ├── arquitectura.md
-│   ├── diseño.md
-│   ├── resultados.md
-│   └── images/
-│       ├── logo.png
-│       ├── arquitectura-vliw.png
-│       ├── diagrama-bloques.png
-│       ├── simulacion.png
-│       └── resultados.png
+├── 📁 docs
+│   ├── 📄 arquitectura.md
+│   ├── 📄 diseño.md
+│   ├── 📄 resultados.md
+│   └── 📁 images
+│       ├── 🖼️ logo.png
+│       ├── 🖼️ arquitectura.png
+│       ├── 🖼️ diagrama.png
+│       └── 🖼️ waveform.png
 │
-├── src/
-│   └── systemverilog/
-│       ├── top/
-│       │   └── vliw_top.sv
-│       │
-│       ├── processor/
-│       │   ├── control_unit.sv
-│       │   ├── decoder.sv
-│       │   ├── register_file.sv
-│       │   └── alu.sv
-│       │
-│       ├── crypto/
-│       │   ├── cipher_core.sv
-│       │   ├── sbox.sv
-│       │   └── ...
-│       │
-│       ├── memory/
-│       │   ├── instruction_memory.sv
-│       │   └── data_memory.sv
-│       │
-│       └── common/
-│           ├── mux.sv
-│           └── ...
+├── 📁 src
+│   └── 📁 systemverilog
+│       ├── 📁 processor
+│       ├── 📁 crypto
+│       ├── 📁 memory
+│       └── 📁 common
 │
-├── simulations/
-│   ├── icarus/
-│   │   ├── testbench/
-│   │   │   ├── tb_vliw_top.sv
-│   │   │   ├── tb_alu.sv
-│   │   │   └── tb_crypto.sv
-│   │   │
-│   │   ├── scripts/
-│   │   │   ├── run.sh
-│   │   │   └── Makefile
-│   │   │
-│   │   └── results/
-│   │       ├── waveforms/
-│   │       └── screenshots/
-│   │
+├── 📁 simulations
+│   └── 📁 icarus
+│       ├── 🧪 tb_vliw_top.sv
+│       ├── 🧪 tb_crypto.sv
+│       ├── ⚙️ run.sh
+│       └── 📁 results
+|
 ```
 
 ---
